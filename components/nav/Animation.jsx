@@ -4,7 +4,7 @@ const Animation = () => {
   return (
     <div className="relative h-screen w-full">
       <video
-        autoPlay
+        autoPlay  // changed to lowercase 'p'
         muted
         loop
         playsInline
