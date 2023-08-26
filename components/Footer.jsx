@@ -15,7 +15,7 @@ const Footer = () => {
           @font-face {
             font-family: 'PPTelegraf-RegularSlanted';
             src: url('/fonts/PPTelegraf-RegularSlanted.woff2') format('woff2'),
-                 url('/fonts/PPTelegraf-RegularSlanted.woff') format('woff');
+                url('/fonts/PPTelegraf-RegularSlanted.woff') format('woff');
             font-weight: normal;
             font-style: normal;
           }
@@ -31,14 +31,14 @@ const Footer = () => {
         >
           {Array.from({ length: 2000 }).map((_, index) => (
             <span key={index} className="inline-block">
-              <a className="px-5"
+              <a className="px-1"
                 href="https://twitter.com/PointBlankpbk"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 ● @pointblankpbk
               </a>
-              <a className="px-5"
+              <a className="px-1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
