@@ -1,18 +1,10 @@
-'use client'
-import React, { useRef } from 'react';
+import React from 'react';
 
 const Animation = () => {
-  const videoRef = useRef(null);
-
-  const handlePlay = () => {
-    const video = videoRef.current;
-    video.play();
-  };
-
   return (
-    <div onClick={handlePlay} className="relative h-screen w-full">
+    <div className="relative h-screen w-full">
       <video
-        ref={videoRef}
+        autoPlay  // changed to lowercase 'p'
         muted
         loop
         playsInline
@@ -26,4 +18,3 @@ const Animation = () => {
 };
 
 export default Animation;
-
