@@ -1,5 +1,5 @@
 import React from 'react';
-import Animation from '@/components/nav/Animation';
+import Animation from '@/components/Animation';
 import Footer from '@/components/Footer';
 
 export default function Home() {

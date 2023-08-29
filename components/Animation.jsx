@@ -1,10 +1,18 @@
-import React from 'react';
+'use client'
+
+import React, { useEffect } from 'react';
 
 const Animation = () => {
+  useEffect(() => {
+    const videoElement = document.getElementById('myVideo');
+    videoElement.play();
+  }, []);
+
   return (
     <div className="relative h-screen w-full">
       <video
-        autoPlay  // changed to lowercase 'p'
+        id="myVideo"
+        autoPlay
         muted
         loop
         playsInline
