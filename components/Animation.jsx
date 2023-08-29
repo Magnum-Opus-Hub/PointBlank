@@ -1,26 +1,17 @@
 'use client'
-
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import gif from '/public/pbklogo.gif';
 
 const Animation = () => {
-  useEffect(() => {
-    const videoElement = document.getElementById('myVideo');
-    videoElement.play();
-  }, []);
-
   return (
-    <div className="relative h-screen w-full">
-      <video
-        id="myVideo"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-auto md:h-full object-contain md:object-cover"
-      >
-        <source src='/pbklogo.mp4' type='video/mp4' />
-        Your browser does not support the video tag
-      </video>
+    <div className="relative h-screen w-full flex items-start">
+      <Image
+        src={gif}
+        alt="Your GIF"
+        layout='fill'
+        className="absolute top-0 left-0 w-full h-auto md:h-full object-contain md:object-cover object-top"
+      />
     </div>
   );
 };
