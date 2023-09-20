@@ -71,10 +71,10 @@ const Capabilities = () => {
           {!isDesktop ? (
             <>
               <div className="justify-self-center pb-10  ">
-                <button className="bg-pedestrian-lemon text-[22px]   text-almost-black rounded-full py-1 px-11 font-telegraf-slanted" >
+                <button className="bg-pedestrian-lemon text-[22px]   text-almost-black rounded-full py-1 px-14 font-telegraf-slanted" >
                   Graphic Design
                 </button>
-                <div className="mt-6 w-72">
+                <div className="mt-6">
                   <ul className="space-y-1 text-[22px]">
                     {graphicDesignTexts.map((text, index) => (
                       <li key={index} className='text-pearl-white font-telegraf'  >{text}</li>
@@ -84,10 +84,10 @@ const Capabilities = () => {
               </div>
 
               <div className="justify-self-center pb-10">
-                <button className="bg-pedestrian-lemon text-[22px] text-almost-black rounded-full py-1 px-9 font-telegraf-slanted" >
+                <button className="bg-pedestrian-lemon text-[22px] text-almost-black rounded-full py-1 px-10 font-telegraf-slanted" >
                   Web Development
                 </button>
-                <div className="mt-6 w-72">
+                <div className="mt-6 w-64">
                   <ul className="space-y-1 text-[22px]">
                     {webDevelopmentTexts.map((text, index) => (
                       <li key={index} className='text-pearl-white font-telegraf'  >{text}</li>
@@ -100,7 +100,7 @@ const Capabilities = () => {
                 <button className="bg-pedestrian-lemon text-[22px] text-almost-black rounded-full py-1 px-6 font-telegraf-slanted" >
                   Software Engineering
                 </button>
-                <div className="mt-6 w-72">
+                <div className="mt-6 w-64">
                   <ul className="space-y-1 text-[22px]">
                     {softwareEngineeringTexts.map((text, index) => (
                       <li key={index} className='text-pearl-white font-telegraf'  >{text}</li>
@@ -114,7 +114,7 @@ const Capabilities = () => {
 <Disclosure as="div" className="justify-self-center ">
             {({ open }) => (
               <div className={`   ${open ? 'mt-[-32vh]' : ''}`}>
-                <Disclosure.Button className={`bg-pedestrian-lemon font-telegraf-slanted   text-[22px] text-almost-black rounded-full py-1 px-11 hover-pulse ${open ? 'mt-[-calc(100% + 1rem)]' : ''}`}  >
+                <Disclosure.Button className={`bg-pedestrian-lemon font-telegraf-slanted   text-[22px] text-almost-black rounded-full py-1 px-14 hover-pulse ${open ? 'mt-[-calc(100% + 1rem)]' : ''}`}  >
                   Graphic Design
                 </Disclosure.Button>
                 <Disclosure.Panel as="div" className="mt-6 absolute w-72">
@@ -131,7 +131,7 @@ const Capabilities = () => {
           <Disclosure as="div" className="justify-self-center">
             {({ open }) => (
               <div className={` ${open ? 'mt-[-32vh]' : ''}`}>
-                <Disclosure.Button className={`bg-pedestrian-lemon text-[22px] font-telegraf-slanted text-almost-black rounded-full py-1 px-9 hover-pulse ${open ? 'mt-[-calc(100% + 1rem)]' : ''}`}  >
+                <Disclosure.Button className={`bg-pedestrian-lemon text-[22px] font-telegraf-slanted text-almost-black rounded-full py-1 px-10 hover-pulse ${open ? 'mt-[-calc(100% + 1rem)]' : ''}`}  >
                   Web Development
                 </Disclosure.Button>
                 <Disclosure.Panel as="div" className="mt-6 absolute  w-72">
