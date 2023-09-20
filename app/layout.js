@@ -1,17 +1,27 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: 'PointBlank',
-  description: 'PoointBlank Studio',
+  title: 'PointBlank - Design & Development-as-a-Service',
+  description: 'PointBlank offers hassle-free Design and Development-as-a-Service. Ideal for startups and enterprises looking to scale. Flexible plans, top 1% talent, and quick turnaround.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="URL_TO_IMAGE" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </head>
+      <body suppressHydrationWarning={true}>
+        {children}
+        <Analytics />
+      </body>
     </html>
-  )
+  );
 }
+

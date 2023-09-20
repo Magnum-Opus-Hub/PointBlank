@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  /* Set the background color to the specified HEX color */
-  background-color: #090d0f;
+  background-color: #0A0F0F;
 }
 
 @font-face {
@@ -15,13 +14,39 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PPTelegraf-Regular';
+  src: url('/fonts/PPTelegraf-Regular.woff2') format('woff2'),
+      url('/fonts/PPTelegraf-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* Your global styles */
+@font-face {
+  font-family: 'PPAgrandir-WideBlackItalic';
+  src: url('/fonts/PPAgrandir-WideBlackItalic.woff2') format('woff2'),
+       url('/fonts/PPAgrandir-WideBlackItalic.woff') format('woff'),
+       url('/fonts/PPAgrandir-WideBlackItalic.ttf') format('truetype'); /* Add this line */
+  font-weight: bold;
+  font-style: italic;
+}
 
-/* Responsive styles */
+.font-grandir-italic {
+  font-family: 'PPAgrandir-WideBlackItalic', sans-serif; /* sans-serif is a fallback font */
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.hover-pulse:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
   .absolute-video {
-    /* Adjust the size for smaller screens */
+
     width: 100%;
     height: auto;
   }
@@ -30,18 +55,18 @@ body {
 .marquee-item {
   display: inline-flex;
   align-items: center;
-  margin-right: 2rem; /* Adjust spacing between items */
+  margin-right: 2rem;
 }
 
 .marquee-text {
-  color: var(--tw-text-writing); /* Use custom writing color */
+  color: var(--tw-text-writing);
   font-size: var(--tw-font-xl);
   text-decoration: none;
-  margin-right: 1rem; /* Adjust spacing between text */
+  margin-right: 1rem;
 }
 
   .footer {
-    background-color: #FFFE1D; /* Yellow background color */
+    background-color: #FFFE1D;
   }
 
   .marquee {
@@ -55,13 +80,13 @@ body {
   }
 
   .text-writing {
-    color: #0A0F0F; /* Writing color */
+    color: #0A0F0F;
   }
 
   .marquee-text {
     display: inline-block;
-    padding-left: 100%; /* Initial position */
-    animation: marquee 30s linear infinite;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
   }
 
   @keyframes marquee {
