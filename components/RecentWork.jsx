@@ -12,7 +12,7 @@ import Image from 'next/image';
 const RecentWork = () => {
   return (
     <div className="my-16 pb-16" aria-label="Recent Work Section">
-      <h2 role="heading" aria-level="1" className="text-5xl md:text-5xl font-bold text-center mb-8 font-grandir-italic text-sugar-chic">RESULTS DELIVERED</h2>
+      <h2 role="heading" aria-level="1" className="text-5xl mt-40 md:text-5xl font-bold text-center mb-8 font-grandir-italic text-sugar-chic">RESULTS DELIVERED</h2>
       <div role="list" className="flex flex-wrap justify-center">
         <div role="listitem" className="w-full hover-pulse md:w-1/4 px-4 py-2">
           <Image src={image1} alt="Project 1" />
