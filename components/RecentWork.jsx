@@ -56,7 +56,7 @@ const RecentWork = () => {
       >
         <p className="text-lg mb-4 text-pearl-white font-grandir-italic md:text-[22px]">WANT TO SEE MORE OF OUR PROJECTS?</p>
         <div className='hover-pulse'>
-          <a href="#" className="bg-pearl-white md:text-[22px] text-almost-black px-4 py-2 font-telegraf-slanted rounded-full">See Recent Work</a>
+          <a href="https://www.figma.com/proto/QufV3rZ4Y2YEyOPFEh90Rg/Sample-Work-PBK?page-id=0%3A1&type=design&node-id=1-5945&viewport=507%2C4%2C0.02&t=h7kSkB3hJHjFxY85-1&scaling=min-zoom&starting-point-node-id=1%3A5945&mode=design" className="bg-pearl-white md:text-[22px] text-almost-black px-4 py-2 font-telegraf-slanted rounded-full">See Recent Work</a>
         </div>
       </motion.div>
     </div>
