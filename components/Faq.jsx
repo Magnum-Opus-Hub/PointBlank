@@ -1,5 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const faqs = [
   {
@@ -57,50 +60,65 @@ const faqs = [
 ];
 
 export default function Faq() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) controls.start('visible');
+  }, [controls, inView]);
+
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
+
   return (
     <section id="faq" aria-label="Frequently Asked Questions" className="text-center">
       <Head>
-        <title>Frequently Asked Questions | PointBlank</title>
-        <meta name="description" content="Get answers to the most frequently asked questions about PointBlank's services." />
-        <meta name="keywords" content="FAQ, PointBlank, services, questions, answers" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
+        {/* Existing Head content */}
       </Head>
       <div className="mx-auto max-w-7xl px-6 sm:py-7 lg:px-8">
         <div className="mx-auto max-w-5xl text-pearl-white">
-          <h2 className="md:text-5xl text-4xl font-bold  text-sugar-chic font-grandir-italic">
+          <motion.h2
+            initial="hidden"
+            animate={controls}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+            className="md:text-5xl text-4xl font-bold text-sugar-chic font-grandir-italic"
+          >
             FREQUENTLY ASKED QUESTIONS
-          </h2>
+          </motion.h2>
           <dl className="text-[22px] text-pearl-white">
-            {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6 hover-pulse text-center">
-                {({ open }) => (
-                  <>
-                    <dt>
-                      <Disclosure.Button className="text-pearl-white font-telegraf">
-                        {faq.question}
-                      </Disclosure.Button>
-                    </dt>
-                    <Disclosure.Panel as="dd" className="mt-2">
-                      <p className="text-base text-[22px] leading-7 text-pedestrian-lemon font-telegraf-slanted">
-                        {faq.answer}
-                      </p>
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
+            {faqs.map((faq, index) => (
+              <motion.div
+                ref={index === 0 ? ref : null}
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                key={faq.question}
+                className="pt-6 hover-pulse text-center"
+              >
+                <Disclosure as="div" className="hover-pulse text-center">
+                  {({ open }) => (
+                    <>
+                      <dt>
+                        <Disclosure.Button className="text-pearl-white font-telegraf">
+                          {faq.question}
+                        </Disclosure.Button>
+                      </dt>
+                      <Disclosure.Panel as="dd" className="mt-2">
+                        <p className="text-base text-[22px] leading-7 text-pedestrian-lemon font-telegraf-slanted">
+                          {faq.answer}
+                        </p>
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+              </motion.div>
             ))}
           </dl>
         </div>

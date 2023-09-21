@@ -1,22 +1,105 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import yellowball from '../public/assets/bilac-10.svg';
 import pinkball from '../public/assets/bilab-09.svg';
 import whiteball from '../public/assets/bilaa-05.svg';
 import StrechedLogo from '../public/assets/master-20.png';
 import Link from 'next/link';
-
-
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const Plans = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
+
+  const plan1Controls = useAnimation();
+  const [plan1Ref, plan1InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const plan2Controls = useAnimation();
+  const [plan2Ref, plan2InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const plan3Controls = useAnimation();
+  const [plan3Ref, plan3InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (plan1InView) {
+      plan1Controls.start('visible');
+    }
+  }, [plan1Controls, plan1InView]);
+
+  useEffect(() => {
+    if (plan2InView) {
+      plan2Controls.start('visible');
+    }
+  }, [plan2Controls, plan2InView]);
+
+  useEffect(() => {
+    if (plan3InView) {
+      plan3Controls.start('visible');
+    }
+  }, [plan3Controls, plan3InView]);
+
+
+  const referControls = useAnimation();
+  const [referRef, referInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (referInView) {
+      referControls.start('visible');
+    }
+  }, [referControls, referInView]);
+
+
   return (
     <section id="plans" aria-label="Subscription Plans" className="md:pt-[35px] pb-60 bg-almost-black text-pearl-white">
-      <h2 role="heading" aria-level="1" className="text-[48px] leading-none text-sugar-chic md:text-5xl  mb-24 text-center font-grandir-italic">
+      <motion.h2
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        role="heading"
+        aria-level="1"
+        className="text-[48px] leading-none text-sugar-chic md:text-5xl  mb-24 text-center font-grandir-italic"
+      >
         CHOOSE YOUR PLAN
-      </h2>
+      </motion.h2>
       <div role="list" className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
         {/* Lemon Plan */}
-        <div role="listitem" className="bg-almost-black p-6">
+        <motion.div
+          ref={plan1Ref}
+          initial="hidden"
+          animate={plan1Controls}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          role="listitem"
+          className="bg-almost-black p-6">
           <div className="relative inline-flex items-center justify-center mb-24">
             <div className="absolute object-cover z-0 rounded-full  w-40 h-40">
               <Image src={yellowball} alt="Background" fill className='object-cover' />
@@ -39,10 +122,17 @@ Get started
             <p>Unlimited projects</p>
             <p>Easy credit card payment</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Sugar Plan */}
-        <div role="listitem" className="bg-almost-black p-6">
+        <motion.div
+          ref={plan2Ref}
+          initial="hidden"
+          animate={plan2Controls}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          role="listitem"
+          className="bg-almost-black p-6">
           <div className="relative inline-flex items-center justify-center mb-24">
             <div className="absolute object-cover z-0 rounded-full w-40 h-40">
               <Image src={pinkball} alt="Background" fill className='object-cover' />
@@ -65,10 +155,17 @@ Get started
             <p>Unlimited projects</p>
             <p>Easy credit card payment</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Pearl Plan */}
-        <div role="listitem" className="bg-almost-black p-6">
+        <motion.div
+          ref={plan3Ref}
+          initial="hidden"
+          animate={plan3Controls}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          role="listitem"
+          className="bg-almost-black p-6">
           <div className="relative inline-flex items-center justify-center mb-24">
             <div className="absolute object-cover z-0 rounded-full w-40 h-40">
               <Image src={whiteball} alt="Background" fill className='object-cover' />
@@ -91,9 +188,19 @@ Get started
             <p>Unlimited projects</p>
             <p>Easy credit card payment</p>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Stretched Logo */}
+
+ <motion.div
+        ref={referRef}
+        initial="hidden"
+        animate={referControls}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        role="contentinfo"
+        aria-label="Refer a Friend Program"
+        className="text-center">
       <div role="presentation" className="text-center mt-28">
         <Image src={StrechedLogo} alt="Background" height={210} width={210} className="mx-auto object-cover" />
       </div>
@@ -108,6 +215,7 @@ Get started
         </button> */}
         </div>
       </div>
+      </motion.div>
     </section>
   );
 };

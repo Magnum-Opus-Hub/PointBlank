@@ -27,7 +27,6 @@ const SiteFooter = () => {
             <li role="listitem"><Link href="https://www.instagram.com/pointblank.design/"><span className="hover:underline cursor-pointer">Instagram</span></Link></li>
             <li role="listitem"><Link href="https://twitter.com/PointBlankpbk"><span className="hover:underline cursor-pointer">Twitter</span></Link></li>
             <li role="listitem"><Link href="https://www.linkedin.com/company/pointblankpbk"><span className="hover:underline cursor-pointer">LinkedIn</span></Link></li>
-            <li role="listitem"><Link href="#"><span className="hover:underline cursor-pointer">Dribble</span></Link></li>
           </ul>
         </div>
       </div>
@@ -35,9 +34,7 @@ const SiteFooter = () => {
       {/* Bottom row */}
       <div className="container mx-auto items-center justify-center text-center mt-12">
         <div className="inline-flex space-x-2" aria-label="Legal Links">
-          <Link href="#"><span className="hover:underline text-lg cursor-pointer font-telegraf" aria-label="Terms of Service">Terms of Service</span></Link>
-          <span className="text-[18px]">–</span>
-          <Link href="#"><span className="hover:underline text-lg cursor-pointer font-telegraf" aria-label="Privacy Policy">Privacy Policy</span></Link>
+          <Link href="https://filipstan.notion.site/Terms-Conditions-04f804765a2845a5992ecb9c2e538002?pvs=4"><span className="hover:underline text-lg cursor-pointer font-telegraf" aria-label="Terms of Service">Terms of Service</span></Link>
         </div>
       </div>
 

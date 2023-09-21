@@ -1,7 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const Features = () => {
+  const controlsTitle = useAnimation();
+  const controlsRow1 = useAnimation();
+  const controlsRow2 = useAnimation();
+
+  const [refTitle, inViewTitle] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [refRow1, inViewRow1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [refRow2, inViewRow2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inViewTitle) controlsTitle.start('visible');
+    if (inViewRow1) controlsRow1.start('visible');
+    if (inViewRow2) controlsRow2.start('visible');
+  }, [controlsTitle, controlsRow1, controlsRow2, inViewTitle, inViewRow1, inViewRow2]);
+
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
+
   return (
     <section id="features" aria-label="PointBlank Features" className="pt-10 pb-24 bg-almost-black text-pearl-white">
       <Head>
@@ -26,11 +58,28 @@ const Features = () => {
         </script>
       </Head>
 
-      <h2 className="text-5xl mb-12 text-center text-sugar-chic font-grandir-italic">WHAT YOU GET</h2>
+      <motion.h2
+        ref={refTitle}
+        initial="hidden"
+        animate={controlsTitle}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        className="text-5xl mb-12 text-center text-sugar-chic font-grandir-italic"
+      >
+        WHAT YOU GET
+      </motion.h2>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <motion.div
+        ref={refRow1}
+        initial="hidden"
+        animate={controlsRow1}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12"
+        >
 
         {/* Column 1 */}
+
         <div className="text-center">
         <iframe
         title='icon6'
@@ -80,9 +129,17 @@ const Features = () => {
           Access the best in global design and engineering to take your projects to the next level.
           </p>
         </div>
-      </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+        </motion.div>
+
+      <motion.div
+        ref={refRow2}
+        initial="hidden"
+        animate={controlsRow2}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mt-16"
+      >
 
         {/* Column 4 */}
         <div className="text-center">
@@ -133,7 +190,7 @@ const Features = () => {
             request shaping up in minutes.
           </p>
         </div>
-      </div>
+        </motion.div>
 
       </section>
   );
