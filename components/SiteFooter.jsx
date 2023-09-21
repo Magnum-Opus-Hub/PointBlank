@@ -34,7 +34,7 @@ const SiteFooter = () => {
       {/* Bottom row */}
       <div className="container mx-auto items-center justify-center text-center mt-12">
         <div className="inline-flex space-x-2" aria-label="Legal Links">
-          <Link href="https://filipstan.notion.site/Terms-Conditions-04f804765a2845a5992ecb9c2e538002?pvs=4"><span className="hover:underline text-lg cursor-pointer font-telegraf" aria-label="Terms of Service">Terms of Service</span></Link>
+          {/* <Link href="https://filipstan.notion.site/Terms-Conditions-04f804765a2845a5992ecb9c2e538002?pvs=4"><span className="hover:underline text-lg cursor-pointer font-telegraf" aria-label="Terms of Service">Terms of Service</span></Link> */}
         </div>
       </div>
 
