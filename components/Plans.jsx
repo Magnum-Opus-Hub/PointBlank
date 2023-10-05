@@ -106,17 +106,17 @@ const Plans = () => {
             </div>
             <span className="text-[22px] font-bold relative z-10 text-almost-black font-grandir-italic" >LEMON</span>
           </div>
-          <h3 className="text-[48px] leading-none md:text-5xl  mb-1 font-grandir-italic" >$3,499/m</h3>
+          <h3 className="text-[48px] leading-none md:text-5xl  mb-1 font-grandir-italic" >$3,999/m</h3>
           <p className="mb-4 text-[22px]  font-telegraf-slanted" >Pause or cancel anytime</p>
           <div className='hover-pulse'>
-          <Link href="https://buy.stripe.com/00g2af0MT3Yf2wU6ov" className="bg-pedestrian-lemon text-black text-[22px] rounded-full  py-2 px-16  font-telegraf-slanted" >
+          <Link href="https://buy.stripe.com/4gwaGL2V12Ub7ReeV2" className="bg-pedestrian-lemon text-black text-[22px] rounded-full  py-2 px-16  font-telegraf-slanted" >
 Get started
           </Link>
           </div>
           {/* Add Features */}
           <div role="list" className="text-center text-[22px] mt-3 font-telegraf">
-            <p>One request at a time</p>
-            <p>Average 60-hour delivery</p>
+          <p>One request at a time</p>
+            <p>Average 48-hour delivery</p>
             <p>Unlimited users</p>
             <p>Unlimited revisions</p>
             <p>Unlimited projects</p>
@@ -139,16 +139,16 @@ Get started
             </div>
             <span className="text-[22px] font-bold relative z-10 text-almost-black font-grandir-italic" >SUGAR</span>
           </div>
-          <h3 className="text-[48px] leading-none md:text-5xl mb-1  font-grandir-italic" >$3,999/m</h3>
+          <h3 className="text-[48px] leading-none md:text-5xl mb-1  font-grandir-italic" >$5,999/m</h3>
           <p className="mb-4 text-[22px] font-telegraf-slanted" >Pause or cancel anytime</p>
           <div className='hover-pulse'>
-          <Link href="https://buy.stripe.com/4gwaGL2V12Ub7ReeV2" className="bg-sugar-chic text-black rounded-full text-[22px] py-2 px-16  font-telegraf-slanted" >
+          <Link href="https://buy.stripe.com/5kAg15ant66nefC4gp" className="bg-sugar-chic text-black rounded-full text-[22px] py-2 px-16  font-telegraf-slanted" >
 Get started
           </Link>
           </div>
           {/* Add Features */}
           <div role="list" className="text-center text-[22px] mt-3 font-telegraf">
-            <p>One request at a time</p>
+          <p>Two requests at a time</p>
             <p>Average 48-hour delivery</p>
             <p>Unlimited users</p>
             <p>Unlimited revisions</p>
@@ -172,21 +172,19 @@ Get started
             </div>
             <span className="text-[22px] font-bold relative z-10 text-almost-black font-grandir-italic" >PEARL</span>
           </div>
-          <h3 className="text-[48px] leading-none md:text-5xl mb-1  font-grandir-italic" >$5,999/m</h3>
-          <p className="mb-4 text-[22px] font-telegraf-slanted" >Pause or cancel anytime</p>
+          <h3 className="text-[48px] leading-none md:text-5xl mb-1  font-grandir-italic" >Enterprise</h3>
+          <p className="mb-4 text-[22px] font-telegraf-slanted" >Custom Pricing</p>
           <div className='hover-pulse'>
-          <Link href="https://buy.stripe.com/5kAg15ant66nefC4gp" className="bg-pearl-white text-black rounded-full text-[22px] py-2 px-16  font-telegraf-slanted" >
-Get started
+          <Link href="https://calendly.com/pointblank-pbk/point-blank-intro?back=1&month=2023-10" className="bg-pearl-white text-black rounded-full text-[22px] py-2 px-16  font-telegraf-slanted" >
+          Schedule a call
           </Link>
           </div>
           {/* Add Features */}
           <div role="list" className="text-center text-[22px] mt-3 font-telegraf">
-            <p>Two requests at a time</p>
-            <p>Average 48-hour delivery</p>
-            <p>Unlimited users</p>
-            <p>Unlimited revisions</p>
-            <p>Unlimited projects</p>
-            <p>Easy credit card payment</p>
+            <p>Fixed Scope</p>
+            <p>Custom delivery time</p>
+            <p>Priority Support</p>
+            <p>Real-time colaboration via Slack</p>
           </div>
         </motion.div>
       </div>
