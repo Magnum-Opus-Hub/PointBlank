@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "How do we communicate?",
-    answer: "We communicate using our platform and over Slack for occasional, general details to discuss. We do not do frequent meetings by default and use meetings only when there are urgent issues to resolve, and it's more efficient to clarify the details with a call."
+    answer: "We communicate using Trello and over Slack for occasional, general details to discuss. We do not do frequent meetings by default and use meetings only when there are urgent issues to resolve, and it's more efficient to clarify the details with a call."
   },
   {
     question: "How does the pausing subscription work?",
