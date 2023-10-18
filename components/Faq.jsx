@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "What types of design and software development requests can I make?",
-    answer: "You can make many requests, from graphic design and branding to web development and software engineering. Our team is skilled in various areas and can handle most design and software development requests."
+    answer: "You can request anything from logo designs and marketing materials to full-stack web development and mobile app creation. Our team specializes in graphic design, UI/UX, and various programming languages to fulfill a wide range of design and development needs."
   },
   {
     question: "Can I request revisions on the designs or software solutions?",
