@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "How does the pausing subscription work?",
-    answer: "Billing cycles are based on 31 days. If you have unique billing needs or require a different structure, we can accommodate that."
+    answer: "Billing cycles are based on 31 days. For example, if you subscribe and use the service for ten days and then pause your subscription, the billing cycle will get paused, and you'll have 21 days of service remaining to be used anytime in the future. If you have unique billing needs or require a different structure, we can accommodate that."
   },
   {
     question: "What is your refund policy?",
