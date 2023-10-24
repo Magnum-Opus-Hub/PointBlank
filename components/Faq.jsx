@@ -6,58 +6,63 @@ import { motion, useAnimation } from 'framer-motion';
 
 const faqs = [
   {
+    question: "What is the Enterprise plan?",
+    answer: "The Enterprise plan is designed for those who need one-time support, are unsure about a subscription model, or are looking for something more malleable to fit their unique needs."
+  },
+  {
     question: "Is there a request limit?",
-    answer: "No, there are no limits to how many design and software development requests you can add. We will complete them one by one."
+    answer: "No, there are no limits to how many design and software development requests you can add. We complete them one by one. For those requiring custom limits, we can accommodate this."
   },
   {
     question: "How fast are requests completed?",
-    answer: "On average, most design and software development requests are completed within two days or less. More complex requests can take longer and are typically broken down into smaller ones."
+    answer: "On average, most design and software development requests are completed within two days or less. If you have specific time constraints or require expedited delivery, we can work with you to meet those needs."
   },
   {
     question: "What does the onboarding process look like?",
-    answer: "After you subscribe, you will receive an email with a link to your platform where you can add your requests and a link to your Stripe customer portal where you can manage your subscription. We will also invite you to your Slack channel, where your dedicated project manager can assist you."
+    answer: "After you subscribe, you'll receive an email with a link to your Trello board and Stripe customer portal. If you require a more tailored onboarding experience, we can provide that as well."
   },
   {
     question: "How do we communicate?",
-    answer: "We communicate using Trello and over Slack for occasional, general details to discuss. We do not do frequent meetings by default and use meetings only when there are urgent issues to resolve, and it's more efficient to clarify the details with a call."
+    answer: "We primarily communicate using Trello and occasional Slack interactions. Meetings can be arranged for clients with unique or urgent communication needs."
   },
   {
     question: "How does the pausing subscription work?",
-    answer: "Billing cycles are based on 31 days. For example, if you subscribe and use the service for ten days and then pause your subscription, the billing cycle will get paused, and you'll have 21 days of service remaining to be used anytime in the future."
+    answer: "Billing cycles are based on 31 days. If you have unique billing needs or require a different structure, we can accommodate that."
   },
   {
     question: "What is your refund policy?",
-    answer: "Unfortunately, there are no refunds. If you're unsatisfied with your subscription, please contact us; we'll do our best to resolve this."
+    answer: "No refunds are available. However, if you're unsatisfied, we'll do our best to resolve the issue. Special considerations can be made on a case-by-case basis."
   },
   {
     question: "What types of design and software development requests can I make?",
     answer: "You can request anything from logo designs and marketing materials to full-stack web development and mobile app creation. Our team specializes in graphic design, UI/UX, and various programming languages to fulfill a wide range of design and development needs."
   },
   {
-    question: "Can I request revisions on the designs or software solutions?",
+    question: "Can I request revisions?",
     answer: "Yes, you can request unlimited revisions until you're 100% satisfied. We believe in delivering quality work that meets your expectations."
   },
   {
     question: "What happens if I need to scale up my requests?",
-    answer: "Our service is flexible and scalable. You can easily upgrade your subscription plan if you need to increase your requests. You can also scale down or pause your subscription at any time."
+    answer: "Our service is flexible and can be scaled to meet your specific requirements."
   },
   {
-    question: "Who owns the rights to the designs and software solutions?",
-    answer: "You do. All designs and software solutions we create for you are 100% yours. We provide native source files and code repositories for all completed work."
+    question: "Who owns the rights to the work?",
+    answer: "You do. All designs and software solutions are 100% yours."
   },
   {
-    question: "Who owns the purchasable assets like mockups and typefaces?",
-    answer: "If there are assets such as mockups, typefaces, or other elements that need to be purchased for your project, you will be responsible for buying them. Once purchased, you will own these assets, but we will use them to complete your design or software development request. This ensures that you have full ownership and rights to all elements of the project."
+    question: "Who owns purchasable assets?",
+    answer: "You're responsible for purchasing any additional assets. Once purchased, you will own these assets."
   },
   {
-    question: "How do you ensure the quality of your work?",
-    answer: "We have a rigorous quality assurance process in place. All designs and software solutions go through multiple rounds of review and testing before they are delivered to you."
+    question: "How do you ensure quality?",
+    answer: "All work goes through multiple rounds of review and testing. Custom quality assurance processes can be arranged."
   },
   {
-    question: "Do you offer support after the design or software solution is delivered?",
-    answer: "We offer ongoing support and maintenance based on your chosen subscription plan. We're committed to ensuring your satisfaction even after the project is completed."
+    question: "Do you offer post-delivery support?",
+    answer: "Yes, fostering long-term relationships is important to us, and that's why we offer ongoing support and maintenance even after your project is complete. From updates and troubleshooting to further enhancements, we've got your back."
   }
 ];
+
 
 export default function Faq() {
   const controls = useAnimation();
